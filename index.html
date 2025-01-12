@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manifest Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Manifest Generator</h1>
+    <form id="manifestForm">
+      <label for="productName">Product Name:</label>
+      <input type="text" id="productName" placeholder="Enter product name" required>
+
+      <label for="pickupDate">Date of Pick Up:</label>
+      <input type="date" id="pickupDate" required>
+
+      <label for="awbNumber">AWB Numbers:</label>
+      <textarea id="awbNumber" placeholder="Enter AWB numbers, one per line" rows="10" required></textarea>
+
+      <label for="shipmentCount">Number of Shipments:</label>
+      <input type="text" id="shipmentCount" placeholder="Enter shipment count" required>
+
+      <button type="submit">Generate Table</button>
+    </form>
+
+    <div class="buttons">
+      <button id="downloadExcel">Download Excel</button>
+      <button id="downloadPDF">Download PDF</button>
+    </div>
+
+    <table id="manifestTable">
+      <thead>
+        <tr>
+          <th>No.</th>
+          <th>AWB Number</th>
+          <th>No.</th>
+          <th>AWB Number</th>
+          <th>No.</th>
+          <th>AWB Number</th>
+          <th>No.</th>
+          <th>AWB Number</th>
+        </tr>
+      </thead>
+      <tbody id="manifestTableBody"></tbody>
+    </table>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
